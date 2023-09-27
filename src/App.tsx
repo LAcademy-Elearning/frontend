@@ -2,7 +2,7 @@
 function App() {
   return (
     <>
-      <div className=" ">
+      <div className="">
         this is the div
       </div>
     </>
