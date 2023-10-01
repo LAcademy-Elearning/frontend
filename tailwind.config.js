@@ -16,6 +16,8 @@ export default {
           light: "#59588D",
           lessLight: "#3C368B",
         },
+        darkHover:"#39375C",
+        search:"#1C1F37",
         orange:"#EC502C",
         lightBlue:"#6E73D9",
         lightPurple:"#5A499C",
@@ -25,6 +27,7 @@ export default {
         lightGreen:"rgba(73, 152, 46, 0.5)",
         veryLightGreen:"#59588D",
         textColor:"#5B5A99",
+        modals:"rgba(38, 34, 80)"
 
       },
       fontFamily: {
@@ -46,6 +49,7 @@ export default {
       screens: {
         sm: "640px", // Small screens
         md: "768px", // Medium screens
+        mdd:"920px", // mdMedium screen
         lg: "1024px", // Large screens
         xl: "1280px", // Extra large screens
       },

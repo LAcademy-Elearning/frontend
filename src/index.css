@@ -1,5 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Actor&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Actor&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.d-flex {
+  @apply flex justify-around items-center;
+}
+.sidebar {
+  @apply transition-all flex flex-col items-center bg-gradient-to-b from-darkPrimary-lessLight to-darkPrimary-lessDark;
+}
+.hoverEffect {
+  @apply rounded-[50%] transition-all delay-100 hover:bg-darkHover;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounceEffect {
+  animation: bounce 770ms infinite;
+}
