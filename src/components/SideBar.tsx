@@ -11,17 +11,21 @@ import {
   FaAngleRight,
   FaAngleLeft,
 } from "react-icons/fa";
-const SideBar = () => {
+interface Props {
+  isBelowMedium: boolean;
+}
+const SideBar = ({ isBelowMedium }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen((prev) => !prev);
   };
-
   return (
     <div
       className={`${
-        isOpen ? " absolute xl:relative  w-[250px]" : "w-[60px] xl:w-[70px]"
-      } sidebar min-h-screen`}
+        isOpen ? " absolute xl:relative w-[250px]" : "w-[60px] xl:w-[70px]"
+      } sidebar min-h-screen ${
+        isBelowMedium ? "hidden" : "flex"
+      } transition-all `}
     >
       <div className="">
         <img className="w-full h-32" src="/Logo.svg" alt="logo" />
