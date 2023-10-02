@@ -4,7 +4,7 @@ interface Props {
   to: string;
   icon: ReactNode;
   name: string;
-  isOpen: boolean;
+  isOpen?: boolean;
 }
 const MenuItem = ({ to, icon, name, isOpen }: Props) => {
   const location = useLocation();
@@ -25,7 +25,7 @@ const MenuItem = ({ to, icon, name, isOpen }: Props) => {
         </div>
         <span
           className={`ml-3 transition-all text-textColor ${
-            isOpen ? "" : "hidden"
+            isOpen ? "block" : "hidden"
           }`}
         >
           {name}

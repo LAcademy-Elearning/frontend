@@ -8,11 +8,11 @@ import { Outlet } from "react-router-dom";
 const Layout = () => {
   const [isBelowMedium,setIsBelowMedium] = useState(true);
   return (
-    <div className=" min-h-screen flex relative">
-      <SideBar isBelowMedium = {isBelowMedium} />
-      <div className="flex-grow bg-darkPrimary-dark min-h-screen p-4">
+    <div className=" min-h-[100vh] flex relative">
+        <SideBar isBelowMedium = {isBelowMedium} />
+      <div className="flex-grow bg-darkPrimary-dark min-h-100vh flex flex-col p-4">
         <TopBar isBelowMedium={isBelowMedium}  setIsBelowMedium= {setIsBelowMedium} />
-        <main>
+        <main className="bg-black flex-1">
           <Outlet />
         </main>
       </div>

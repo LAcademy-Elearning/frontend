@@ -8,7 +8,7 @@
   @apply flex justify-around items-center;
 }
 .sidebar {
-  @apply transition-all md:flex flex-col items-center bg-gradient-to-b from-darkPrimary-lessLight to-darkPrimary-lessDark;
+  @apply transition-all md:flex flex-col items-center  bg-gradient-to-b from-darkPrimary-lessLight to-darkPrimary-lessDark z-50;
 }
 .hoverEffect {
   @apply rounded-[50%] transition-all delay-100 hover:bg-darkHover;

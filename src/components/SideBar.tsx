@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiFillHome } from "react-icons/ai";
 import MenuItem from "../atoms/MenuItem";
 import {
@@ -19,11 +19,17 @@ const SideBar = ({ isBelowMedium }: Props) => {
   const handleClick = () => {
     setIsOpen((prev) => !prev);
   };
+  useEffect(()=>{
+    if(window.innerWidth <960){
+      setIsOpen(false);
+    }
+  },[])
   return (
+    <div className="sticky top-0 left-0">
     <div
       className={`${
-        isOpen ? " absolute xl:relative w-[250px]" : "w-[60px] xl:w-[70px]"
-      } sidebar min-h-screen ${
+        isOpen ? " min-w-[250px]" : "min-w-[60px] xl:min-w-[70px]"
+      } sidebar sticky top-0 left-0 min-h-[100vh] ${
         isBelowMedium ? "hidden" : "flex"
       } transition-all `}
     >
@@ -94,11 +100,12 @@ const SideBar = ({ isBelowMedium }: Props) => {
       </ul>
       <button
         onClick={handleClick}
-        className="text-2xl text-textColor my-3 p-2 rounded-full bg-darkPrimary-complimentary
+        className="text-2xl hidden md:block text-textColor my-3 p-2 rounded-full bg-darkPrimary-complimentary
         bounceEffect"
       >
         {isOpen ? <FaAngleLeft /> : <FaAngleRight />}
       </button>
+    </div>
     </div>
   );
 };
