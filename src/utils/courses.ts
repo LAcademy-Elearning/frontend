@@ -1,4 +1,4 @@
-export const Courses = [
+export const Course = [
     {
         name:"javascript",
         enroledStudents:23,
