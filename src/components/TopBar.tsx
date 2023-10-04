@@ -18,7 +18,7 @@ const TopBar = ({setIsBelowMedium,isBelowMedium}:Props) => {
           <div onClick={()=>setIsBelowMedium(prev=>!prev)} className=" flex items-center justify-center md:hidden text-xl text-textColor h-8 w-8 hoverEffect">
             { isBelowMedium ? <FaBars/> : <FaXmark/> }
           </div>
-         <PageName Pagename="Dashboard" /> 
+         <PageName pagename="Dashboard" /> 
         </div>
       <SearchBar width="w-[40%] hidden md:flex" />
       <Settings setSearch = {setSearch}/>
@@ -29,6 +29,10 @@ const TopBar = ({setIsBelowMedium,isBelowMedium}:Props) => {
       </div>
       <SearchBar width="w-full flex md:hidden"/>
     </div>
+     <div className="mt-4 text-white">
+      <h3 className="font-medium text-[18px]">{"Welcome castella"}</h3>
+      <p className=" text-xs font-light">get all courses down here</p>
+     </div>
     </div>
     
   );

@@ -25,10 +25,10 @@ const SideBar = ({ isBelowMedium }: Props) => {
     }
   },[])
   return (
-    <div className="sticky top-0 left-0">
+    <div className="">
     <div
       className={`${
-        isOpen ? " min-w-[250px]" : "min-w-[60px] xl:min-w-[70px]"
+        isOpen ? " w-[250px]" : "w-[60px] xl:w-[70px]"
       } sidebar sticky top-0 left-0 min-h-[100vh] ${
         isBelowMedium ? "hidden" : "flex"
       } transition-all `}
