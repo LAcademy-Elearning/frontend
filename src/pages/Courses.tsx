@@ -1,31 +1,34 @@
-import { Course } from "../utils/courses";
-
-interface CourseMetadata {
-  color: string;
-  icon: string;
-}
-
+import { courses } from "../utils/courses";
+import { getColorAndIcon } from "../utils/courseMapping";
+import CourseLayout from "../components/CourseLayout";
+import { ScaleLoader } from "react-spinners";
 const Courses = () => {
-  const getColorAndIcon = (courseName: string) => {
-    const words = courseName.split(" ");
-    let result: string = "";
-    for (const word of words) {
-      if (word.length > 1) {
-        result += word[0];
-      } else {
-        result += word;
-      }
-    }
-    const courseMappings: Record<string, CourseMetadata> = {
-      javascript: { color: "blue", icon: "math-icon.png" },
-      GUI: { color: "green", icon: "history-icon.png" },
-      FOP: { color: "red", icon: "science-icon.png" },
-    };
-    console.log(result);
-    return courseMappings[result];
-  };
-
-  return <div className="text-white"></div>;
+ let isLoading = false;
+ let fetchedCourses = null;
+  return (
+    <div className="text-white p-5 bg-[#1C1755] h-full">
+      <div className="flex flex-wrap gap-4  justify-center h-full">
+        {isLoading && <div className="h-full flex items-center" >
+          <ScaleLoader color="#EC502C" />
+          </div>}
+        {courses && courses.map((course, index) => {
+          const { bgColor, enrollColor, icon } = getColorAndIcon(course.name);
+          return (
+            <CourseLayout
+              key={index}
+              name={course.name}
+              enroledStudents={course.enroledStudents}
+              notes={course.notes}
+              topics={course.topics}
+              bgColor={bgColor}
+              enrollColor={enrollColor}
+              icon={icon}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default Courses;
