@@ -6,8 +6,8 @@ const Courses = () => {
  let isLoading = false;
  let fetchedCourses = null;
   return (
-    <div className="text-white p-5 bg-[#1C1755] h-full">
-      <div className="flex flex-wrap gap-4  justify-center h-full">
+    <div className="text-white p-5 bg-[#1C1755] h-full flex justify-center">
+      <div className="grid sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-5 gap-4 h-full">
         {isLoading && <div className="h-full flex items-center" >
           <ScaleLoader color="#EC502C" />
           </div>}

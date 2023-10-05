@@ -21,7 +21,7 @@ const CourseLayout = ({
 }: Props) => {
   return (
     <div
-      className="max-w-[18%] min-w-[19%] flex flex-col justify-between rounded-xl p-4"
+      className=" flex flex-col justify-between rounded-xl p-4"
       style={{ backgroundColor: bgColor }}
     >
       <div className=" h-14 w-14 bg-[#ffffff1f] rounded-full flex items-center justify-center">
