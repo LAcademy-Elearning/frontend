@@ -19,16 +19,9 @@ export default {
         darkHover:"#39375C",
         search:"#1C1F37",
         orange:"#EC502C",
-        // bghtml_css:"#6E73D9",
-        // html_css:"#353297",
-        // Gui:"#FFD5BE",
-        // bgGui:"#59588D",
-        // Fop:"#49982e80",
-        // bgFop:"#727FA0",
-        // bgOtherCourse:"#5A499C",
-        // otherCourse:"#35329780",
         textColor:"#5B5A99",
-        modals:"rgba(38, 34, 80)"
+        modals:"rgba(38, 34, 80)",
+        addCourseAreaDark:"#282458"
 
       },
       fontFamily: {
