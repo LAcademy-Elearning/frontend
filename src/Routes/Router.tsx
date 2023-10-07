@@ -6,6 +6,7 @@ import Documents from "../pages/Documents";
 import Students from "../pages/Students";
 import Facilitators from "../pages/Facilitators";
 import Statistics from "../pages/Statistics";
+import AddCourses from "../pages/AddCOurses";
 
 const PageRouter = () => {
   return (
@@ -17,6 +18,7 @@ const PageRouter = () => {
         <Route path="/students" element={<Students/>} />
         <Route path="/facilitators" element={<Facilitators/>}/>
         <Route  path="/statistics" element={<Statistics/>} />
+        <Route  path="/add_courses" element={<AddCourses/>} />
       </Route>
     </Routes>
   );

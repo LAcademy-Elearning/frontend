@@ -29,10 +29,7 @@ const TopBar = ({setIsBelowMedium,isBelowMedium}:Props) => {
       </div>
       <SearchBar width="w-full flex md:hidden"/>
     </div>
-     <div className="mt-4 text-white">
-      <h3 className="font-medium text-[18px]">{"Welcome castella"}</h3>
-      <p className=" text-xs font-light">get all courses down here</p>
-     </div>
+     
     </div>
     
   );

@@ -74,8 +74,8 @@ const SideBar = ({ isBelowMedium }: Props) => {
           isOpen={isOpen}
         />
         <MenuItem
-          to="/#"
-          name="students"
+          to="/add_courses"
+          name="add courses"
           icon={<FaReceipt />}
           isOpen={isOpen}
         />
