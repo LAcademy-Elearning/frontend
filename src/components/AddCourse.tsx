@@ -14,6 +14,9 @@ const AddCourse = () => {
         </div>
         </Link>
       </div>
+      <div className='mt-5 '>
+        <textarea className='w-full outline-none rounded-lg text-black px-4  pt-4' placeholder='type your course Name' name=""></textarea>
+      </div>
     </AddCourseArea>
   )
 }
