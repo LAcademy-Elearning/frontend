@@ -4,7 +4,7 @@ interface Props {
 }
 const AddCourseArea = ({ children }: Props) => {
   return (
-    <div className=" bg-addCourseAreaDark bg-opacity-60 border border-orange rounded-lg p-7">
+    <div className=" bg-addCourseAreaDark bg-opacity-60 border border-orange rounded-lg p-7 h-[450px]">
       {children}
     </div>
   );

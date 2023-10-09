@@ -4,14 +4,14 @@ import AddTopic from "../components/AddTopic";
 import AddContent from "../components/AddContent";
 
 const AddCourses = () => {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(0);  
   const PageDisplay = () => {
     if (page === 0) {
-      return <AddCourse />;
+      return <AddCourse  setPage= {setPage}/>;
     } else if (page === 1) {
-      return <AddTopic />;
+      return <AddTopic  setPage= {setPage}/>;
     } else {
-      return <AddContent />;
+      return <AddContent setPage= {setPage} />;
     }
   };
   const pageTitles = ["Add Course", "Add Topics", "Add content", "Complete"];
@@ -33,7 +33,7 @@ const AddCourses = () => {
           ></div>
         </div>
       </div>
-        <div className="mt-4 py-3 md:px-5 lg:w-[84%] mx-auto ">
+        <div className="mt-4 py-3 md:px-5 lg:w-[84%] mx-auto min-h-[400px]">
           {PageDisplay()}
         </div>
     </div>
