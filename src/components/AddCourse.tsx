@@ -33,7 +33,9 @@ const AddCourse: React.FC<Props> = ({ setPage }) => {
               placeholder="type your course Name"
               name=""
             ></textarea>
-            <span className=" self-end mt-2 text-xs">{text.length}/{maxCharacters}</span>
+            <span className=" self-end mt-2 text-xs">
+              {text.length}/{maxCharacters}
+            </span>
           </div>
         </div>
         <div className=" self-center">

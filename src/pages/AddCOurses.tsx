@@ -5,6 +5,15 @@ import AddContent from "../components/AddContent";
 
 const AddCourses = () => {
   const [page, setPage] = useState(0);  
+  const [courseData, setCourseData] = useState({
+    courseName:"",
+    topics:[],
+    courseContent:"",
+  });
+  const maxCharacters = 100;
+  const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const newText = e.target.value;
+  };
   const PageDisplay = () => {
     if (page === 0) {
       return <AddCourse  setPage= {setPage}/>;
