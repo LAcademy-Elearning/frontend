@@ -14,8 +14,8 @@ const Modal = ({ children, position, isopen,onclose }: Props) => {
   if (!isopen) return null;
   return ReactDOM.createPortal(
     <div
-      id="container"
-      onClick={handleClose}
+    onClick={handleClose}
+    id="container"
       className={`fixed transition-all inset-0 bg-black bg-opacity-20 backdrop-blur-[1px]   ${position}`}
     >
       {children}
