@@ -2,7 +2,6 @@ import { useState } from "react";
 import AddCourse from "../components/AddCourse";
 import AddTopic from "../components/AddTopic";
 import AddContent from "../components/AddContent";
-
 const AddCourses = () => {
   const [page, setPage] = useState(0);  
   const [courseData, setCourseData] = useState({
