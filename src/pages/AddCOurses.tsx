@@ -3,11 +3,11 @@ import AddCourse from "../components/AddCourse";
 import AddTopic from "../components/AddTopic";
 import AddContent from "../components/AddContent";
 const AddCourses = () => {
-  const [page, setPage] = useState(0);  
+  const [page, setPage] = useState(0);
   const [courseData, setCourseData] = useState({
-    courseName:"",
-    topics:[],
-    courseContent:"",
+    courseName: "",
+    topics: [],
+    courseContent: "",
   });
   const maxCharacters = 100;
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -15,11 +15,11 @@ const AddCourses = () => {
   };
   const PageDisplay = () => {
     if (page === 0) {
-      return <AddCourse  setPage= {setPage}/>;
+      return <AddCourse setPage={setPage} />;
     } else if (page === 1) {
-      return <AddTopic  setPage= {setPage}/>;
+      return <AddTopic setPage={setPage} />;
     } else {
-      return <AddContent setPage= {setPage} />;
+      return <AddContent setPage={setPage} />;
     }
   };
   const pageTitles = ["Add Course", "Add Topics", "Add content", "Complete"];
@@ -41,9 +41,9 @@ const AddCourses = () => {
           ></div>
         </div>
       </div>
-        <div className="mt-4 py-3 md:px-5 lg:w-[84%] mx-auto min-h-[400px]">
-          {PageDisplay()}
-        </div>
+      <div className="mt-4 py-3 md:px-5 lg:w-[84%] mx-auto min-h-[400px]">
+        {PageDisplay()}
+      </div>
     </div>
   );
 };
