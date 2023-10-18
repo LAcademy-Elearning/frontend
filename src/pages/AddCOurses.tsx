@@ -1,7 +1,8 @@
 import { useState } from "react";
-import AddCourse from "../components/AddCourse";
-import AddTopic from "../components/AddTopic";
-import AddContent from "../components/AddContent";
+import AddCourse from "../components/CourseForms/AddCourse";
+import AddTopic from "../components/CourseForms/AddTopic";
+import AddContent from "../components/CourseForms/AddContent";
+import AddedComplete from "../components/CourseForms/AddedComplete";
 const AddCourses = () => {
   const [page, setPage] = useState(0);
   const [courseData, setCourseData] = useState({
@@ -9,19 +10,18 @@ const AddCourses = () => {
     topics: [],
     courseContent: "",
   });
-  const maxCharacters = 100;
-  const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newText = e.target.value;
-  };
   const PageDisplay = () => {
     if (page === 0) {
       return <AddCourse setPage={setPage} />;
     } else if (page === 1) {
       return <AddTopic setPage={setPage} />;
-    } else {
+    } else if (page === 2) {
       return <AddContent setPage={setPage} />;
+    } else {
+      return <AddedComplete addAnother={()=>setPage(0)}/>;
     }
   };
+
   const pageTitles = ["Add Course", "Add Topics", "Add content", "Complete"];
   return (
     <div className="h-full text-white p-5">

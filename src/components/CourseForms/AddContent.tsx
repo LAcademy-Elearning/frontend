@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import AddCourseArea from "../../atoms/AddCourseArea";
 import { FaXmark } from "react-icons/fa6";
-import AddCourseArea from "../atoms/AddCourseArea";
 import { Link } from "react-router-dom";
 
-const AddTopic: React.FC<Props> = ({ setPage }) => {
+const AddContent: React.FC<Props> = ({ setPage }) => {
   const [text, setText] = useState("");
-  const maxCharacters = 100;
+  const maxCharacters = 500;
   const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newText = e.target.value;
     if (newText.length <= maxCharacters) {
@@ -14,22 +14,22 @@ const AddTopic: React.FC<Props> = ({ setPage }) => {
   };
   return (
     <AddCourseArea>
-      <div>
+      <div className="h-[80%]">
         <div className="flex justify-between items-center">
-          <h2 className="text-lg">Add topics</h2>
+          <h2 className="text-lg">Add Content</h2>
           <Link to={"/courses"}>
             <div className="text-lg hoverEffect flex items-center justify-center rounded-full h-8 w-8">
               <FaXmark />
             </div>
           </Link>
         </div>
-        <div className="mt-5 flex flex-col ">
+        <div className="mt-5 flex flex-col">
           <textarea
             value={text}
             onChange={handleTextChange}
             maxLength={maxCharacters}
-            className="w-full outline-none rounded-lg text-black px-4  pt-4"
-            placeholder="type your course topic "
+            className="outline-none rounded-lg text-black px-4 h-full  pt-4"
+            placeholder="type your course content"
             name=""
           ></textarea>
           <span className=" self-end mt-2 text-xs">
@@ -37,11 +37,13 @@ const AddTopic: React.FC<Props> = ({ setPage }) => {
           </span>
         </div>
       </div>
-      <div className="flex justify-around items-center">
+      <div className=" flex justify-around items-center">
         <button
-        onClick={() => setPage((prev) => prev - 1)}
-        className="bg-orange px-14 rounded-xl py-4"
-        >Back</button>
+          onClick={() => setPage((prev) => prev - 1)}
+          className="bg-orange px-14 rounded-xl py-4"
+        >
+          Back
+        </button>
         <button
           onClick={() => setPage((prev) => prev + 1)}
           className="bg-orange px-14 rounded-xl py-4"
@@ -53,4 +55,4 @@ const AddTopic: React.FC<Props> = ({ setPage }) => {
   );
 };
 
-export default AddTopic;
+export default AddContent;

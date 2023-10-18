@@ -13,8 +13,8 @@ const TopBar = ({setIsBelowMedium,isBelowMedium}:Props) => {
   const [search,setSearch] = useState<boolean>(false);
   return (
     <div className="pb-4 sticky top-0 bg-inherit">
-      <div className={`flex justify-between items-center font-actor ${ search ? "hidden md:flex":""}`}>
-        <div className="flex items-center gap-3">
+      <div className={`flex justify-between md:justify-evenly xl:justify-between items-center font-actor ${ search ? "hidden md:flex":""}`}>
+        <div className="flex items-center gap-3 justify-self-start">
           <div onClick={()=>setIsBelowMedium(prev=>!prev)} className=" flex items-center justify-center md:hidden text-xl text-textColor h-8 w-8 hoverEffect">
             { isBelowMedium ? <FaBars/> : <FaXmark/> }
           </div>
